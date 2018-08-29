@@ -1,0 +1,19 @@
+0x00  - 	: 01
+0x01  - 0x0b	: 00
+0x0c  - 0x0d    : Changes every save
+--1 Green in upper left corner
+0x0e  - 0x13    : 00 00 FF FF FF FF
+0x14  - 0x14    : 01 <--Count of Green
+0x15  - 0x1F    : 00
+0x20  - 0x21    : Changed every save
+--1 Blue in upper left corner
+0x0e  - 0x13    : 00 00 FF FF FF FF
+0x14  - 0x17    : 00
+0x18  - 0x18    : 01 <--Count of Blue
+--1 Red in upper left corner
+0x0e  - 0x13    : 00 00 FF FF FF FF
+0x14  - 0x1B    : 00
+0x1C  - 0x1C    : 01 <--Count of Red
+--2nd Row is Green Tiles
+0x0e  - 0x13    : 00 00 F5 FF FF FF
+0x14  - 0x14    : 0B

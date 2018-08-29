@@ -1,0 +1,129 @@
+9b 0a 07 : Blue in Upper Left Corner
+ff 83 03 : Blue in Upper Left Corner (c1 0e)
+fa 9b 04 : " (58 13)
+ab 10 03 : " (dd 0c)
+7d f5 06 - green in lower right corner
+a8 65 09 (73 24) - blue in lower right corner
+
+be 0e
+bf 0e 00 (Upper Left Corner) Green
+75 58 00 (Lower Left Corner) Green
+47 83 03 (Upper Right Corner) Green
+fd cc 03 (Lower Right Corner) Green
+
+d3 11
+f3 6a 00 Lower Left
+c6 7c 00 Top Row Col 2
+48 3f 04 Upper Right 
+67 98 04 Lower Right
+
+4b 13
+d0 fa 00 Top Rown 3rd Col
+c3 73 00 Lower Left
+e0 98 04 Upper Right
+57 f9 04 Lower Right
+
+5a 0b
+94 93 00 Top Row 3rd Col - Blue
+1d 44 00 Lower Left - Green
+73 b4 02 Upper Right - Green
+35 ed 02 Lower Right - Green
+
+31 0a
+59 47 00 - Top Row Blue
+27 3d 00 - Lower Left Green
+af 6d 02 - Upper Right Blue
+a3 a0 02 - Lower Right Green
+
+4a 1a
+4c 1a 00 - Upper Left Blue
+bd 9d 00 - Lower Left Green
+a4 43 06 - Upper Right Blue
+16 c7 06 - Lower Right Blue
+
+70 1c
+72 1c 00 - Add two two first value copy 2nd.
+12 c7 00 -
+b2 71 01 -
+52 1c 02 -
+f2 c6 02 -
+92 71 03 -
+32 1c 04 -
+d2 c6 04 -
+72 71 05 -
+12 1c 06 -
+b2 c6 06 -
+
+92 13
+94 13 00
+89 00 00
+6c fe 00
+d8 72 01
+44 e9 01
+b0 5e 02
+1c d4 02
+88 49 03
+f4 be 03
+60 34 04
+cb a9 04 - Green
+
+24 0b
+26 0b 00
+fe 4d 00
+d6 90 00
+ae d3 00
+86 16 01
+5e 59 01
+36 9c 01
+0e df 01
+e6 21 02
+be 64 02
+96 17 02
+
+(All Blue On First Col)
+19 1f
+1b 1f 00<-- Col Indicator
+34 2e 00
+4d 5d 00
+66 7c 00
+7f 9b 00
+98 ba 00
+(All Blue On 2nd Col)
+49 26
+01 0c 01
+4a 32 01
+93 58 01
+dc 7e 01
+25 a5 01
+6e cb 01
+
+c0 04
+42 5a 00 00
+02 5f 00 00
+c2 63 00 00
+82 68 00 00
+42 6d 00 00
+02 72 00 00
+
+b5 13
+b7 13 00 00 b5+2 13
+6c 27 00 00 7-1b+c 13+14
+21 3b 00 00 27-6 6/2c-1
+d6 4e 00 00 
+8b 62 00 00
+40 76 00 00
+
+f4 89 00 00
+a9 9d 00 00
+5e b1 00 00
+13 c5 00 00
+c8 d8 00 00
+7d ec 00 00
+
+
+
+
+
+
+
+

@@ -1,0 +1,73 @@
+0x0C 0x0D
+  a6   07  *Magic Number A, Magic Number B*
+
+If Offset 0x24 is as follows (Tile 2 or (1+1))
+
+4F 0f 00 00
+|  |
+|  |
+|  +--------------------------------- (1+1)*Magic Number B = 0x0E (Note it is one more than the calculated value)
+|
+|
++------------------------(1+1)*Magic Number A = 14C (We take the last 2 bytes 4C and the 1 gets added to the 
+						     second byte above to form 0X0F)
+
+BlockValue = 4F
+CheckValue = 4C
+
+BlockValue - Check Value == 3, The block is Red. (1 = Green, 2 = Blue, 3 = Red *That is simply the propriatary format*
+
+*In this case we do not need to be concerned with the
+second,third, or fourth bytes.  But can see how we could 
+use them later.
+
+
+Offset 0x44 (Tile 10)
+
+7E 4C 00 00
+
+
+(9+1) 0X0A * 0xA6 = 0X67C = 0x7C
+(9+1) 0X0A * 0x07 = 0X46  = 0x06 + 0x46 = 0x4C
+
+0x7E - 0x7C = 2 = Blue
+
+
+Offset 0xA4(Tile 34, 22 Hex)
+
+*In this case it can be seen that we will need to
+
+0E 04 01 00
+
+22 * A6 = 160C = 0X0C
+22 * 07 = EE, EE + 16 = 104 = 0X04
+Byte three = 01
+
+
+Issues can happen when the block value is less than the check value.
+When this happens we must utilize the remaining data to reconstruct 
+the original block value.
+
+
+For Instance Offset 0xB0 (Tile 37, 25 Hex):
+01 1b 01 00
+
+25 * a6 = 17FE *Already we can see there is a problem!  Since we cannot perform the original calculation of BlockValue - CheckValue.
+
+Worse! We have two levels to unroll.
+
+In this case the tile was Red, I know this from experience.
+Software does not work off of experience.
+
+The original value that caused this all to happen was 17FE + 3 (Red Block) = 1801
+
+25 * 07 = 103 = 03 Carry 1 to byte 3
+03 + 18 = 1B
+
+Resulting in 01 1B 01 00.
+
+Now, to unroll it.
+Value1 = 1 CAT 1B == 11B
+11B - 103 = 18 *This is the other byte of the first word.
+
+Resulting in 1801 now we can use 1801 - 17FE = 3 Whic is a Red block.
